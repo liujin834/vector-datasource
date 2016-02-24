@@ -2,6 +2,7 @@ SELECT
     name,
     {% filter geometry %}way{% endfilter %} AS __geometry__,
     osm_id AS __id__,
+    min_zoom,
     way_area AS area,
     cuisine,
     religion,
@@ -13,8 +14,9 @@ SELECT
     tags->'exit_to' AS exit_to,
     aeroway,
     %#tags AS tags,
-    COALESCE("aerialway", "aeroway", "amenity", "barrier", "craft", "highway", "historic",
-             "leisure", "lock", "man_made", "natural", "office", "power", "railway",
+    COALESCE("aerialway", "aeroway", "amenity", "barrier", "craft", "emergency",
+             "tags"->'healthcare', "highway", "historic", "leisure", "lock",
+             "man_made", "natural", "office", "power", "railway",
              "tags"->'rental', "shop", "tourism", "waterway") AS kind
 
 FROM (
@@ -23,14 +25,14 @@ FROM (
     name, way, 0::real AS way_area, mz_poi_min_zoom AS min_zoom,
     osm_id,
     cuisine, religion, sport, ref,
-    aerialway, aeroway, amenity, barrier, craft, highway, historic, leisure, lock, man_made, "natural", office, power, railway, shop, tourism, waterway,
+    aerialway, aeroway, amenity, barrier, craft, emergency, highway, historic, leisure, lock, man_made, "natural", office, power, railway, shop, tourism, waterway,
     tags->'attraction' AS attraction,
     tags->'zoo' AS zoo,
     -- note: the mz_calculate_transit_routes function is pretty expensive,
     -- so we only want to calculate it when we actually need the result.
     CASE
       WHEN railway='station' AND osm_id > 0
-        THEN mz_calculate_transit_routes(osm_id)
+        THEN mz_calculate_transit_routes(osm_id, NULL)
       ELSE NULL::text[]
     END AS transit_routes,
     tags
@@ -40,7 +42,11 @@ FROM (
 
   WHERE
     {{ bounds|bbox_filter('way') }}
+{% if zoom >= 16 %}
+    AND mz_poi_min_zoom IS NOT NULL
+{% else %}
     AND mz_poi_min_zoom <= {{ zoom }}
+{% endif %}
 
 UNION ALL
 
@@ -48,10 +54,16 @@ UNION ALL
     name, way, way_area, mz_poi_min_zoom AS min_zoom,
     osm_id,
     cuisine, religion, sport, ref,
-    aerialway, aeroway, amenity, barrier, craft, highway, historic, leisure, lock, man_made, "natural", office, power, railway, shop, tourism, waterway,
+    aerialway, aeroway, amenity, barrier, craft, emergency, highway, historic, leisure, lock, man_made, "natural", office, power, railway, shop, tourism, waterway,
     tags->'attraction' AS attraction,
     tags->'zoo' AS zoo,
-    NULL AS transit_routes,
+    -- note: the mz_calculate_transit_routes function is pretty expensive,
+    -- so we only want to calculate it when we actually need the result.
+    CASE
+      WHEN railway='station' AND osm_id > 0
+        THEN mz_calculate_transit_routes(NULL, osm_id)
+      ELSE NULL::text[]
+    END AS transit_routes,
     tags
 
   FROM
@@ -59,6 +71,10 @@ UNION ALL
 
   WHERE
     {{ bounds|bbox_filter('way') }}
+{% if zoom >= 16 %}
+    AND mz_poi_min_zoom IS NOT NULL
+{% else %}
     AND mz_poi_min_zoom <= {{ zoom }}
+{% endif %}
 
-) points_and_centroids
+) pois
