@@ -209,15 +209,6 @@ post_process:
     params:
       source_layer: transit
       target_value_type: int
-  - fn: TileStache.Goodies.VecTiles.transform.csv_match_properties
-    resources:
-      matcher:
-        type: file
-        init_fn: TileStache.Goodies.VecTiles.transform.CSVMatcher
-        path: spreadsheets/water.csv
-    params:
-      source_layer: water
-      target_value_type: int
   - fn: TileStache.Goodies.VecTiles.transform.drop_properties
     params:
       source_layer: roads
@@ -230,7 +221,6 @@ post_process:
         13: { area: 1600, volume: 300000 }
         14: { area:  100, volume: 200000 }
         15: { area:  100, volume: 100000 }
-        16: { area:   25, volume:  50000 }
   - fn: TileStache.Goodies.VecTiles.transform.intercut
     params:
       base_layer: roads
@@ -249,6 +239,17 @@ post_process:
         boundary: "yes"
         area: true
       snap_tolerance: 0.125
+  # have to do the water properties matching _after_ exterior boundaries
+  # as it depends on having the "boundary: yes" property available.
+  - fn: TileStache.Goodies.VecTiles.transform.csv_match_properties
+    resources:
+      matcher:
+        type: file
+        init_fn: TileStache.Goodies.VecTiles.transform.CSVMatcher
+        path: spreadsheets/water.csv
+    params:
+      source_layer: water
+      target_value_type: int
   - fn: TileStache.Goodies.VecTiles.transform.overlap
     params:
       base_layer: buildings
