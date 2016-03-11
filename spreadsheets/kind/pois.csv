@@ -1,0 +1,86 @@
+disused,aerialway,aeroway,amenity,barrier,craft,emergency,highway,historic,leisure,lock,man_made,natural,office,power,railway,shop,tags->attraction,tags->healthcare,tags->rental,tags->zoo,tourism,waterway,min_zoom,kind
+-no,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,NULL,NULL
+*,*,aerodrome;airport,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,"LEAST(zoom + 4.12, 13)",*
+*,*,*,hospital,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,"LEAST(zoom + 3.32, 14)",*
+*,*,*,*,*,*,*,*,*,*,*,*,peak;volcano,*,*,*,*,*,*,*,*,*,*,11,*
+*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,station,*,*,*,*,*,*,*,"LEAST(zoom + 0.38, 12)",*
+*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,zoo,*,"LEAST(zoom + 3.00, 13)",*
+*,*,*,*,*,*,*,*,*,*,*,*,spring,*,*,*,*,*,*,*,*,*,*,14,*
+*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,level_crossing,*,*,*,*,*,*,*,14,*
+*,*,*,bank;cinema;courthouse;embassy;fire_station;fuel;library;police;post_office;theatre,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,"LEAST(zoom + 2.7, 16)",*
+*,*,*,biergarten;pub;bar;restaurant;fast_food;cafe,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,"LEAST(zoom + 2.50, 17)",*
+*,*,*,pharmacy;veterinary,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,"LEAST(zoom + 3.3, 17)",*
+*,*,*,*,*,brewery;carpenter;confectionery;dressmaker;electrician;gardener;handicraft;hvac;metal_construction;painter;photographer;photographic_laboratory;plumber;pottery;sawmill;shoemaker;stonemason;tailor;winery,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,"LEAST(zoom + 3.3, 17)",*
+*,*,*,nursing_home,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,"LEAST(zoom + 1.25, 16)",*
+*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,music,*,*,*,*,*,*,"LEAST(zoom + 1.27, 17)",*
+*,*,*,community_centre,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,"LEAST(zoom + 3.98, 17)",*
+*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,sports,*,*,*,*,*,*,"LEAST(zoom + 1.53, 17)",*
+*,*,*,college,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,"LEAST(zoom + 2.35, 16)",*
+*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,mall,*,*,*,*,*,*,"LEAST(zoom + 2.74, 17)",*
+*,*,*,*,*,*,*,*,*,stadium,*,*,*,*,*,*,*,*,*,*,*,*,*,"LEAST(zoom + 2.30, 15)",*
+*,*,*,university,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,"LEAST(zoom + 2.55, 15)",*
+*,*,*,prison,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,"LEAST(zoom + 2.55, 15)",*
+*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,museum,*,"LEAST(zoom + 1.43, 16)",*
+*,*,*,*,*,*,*,*,landmark,*,*,*,*,*,*,*,*,*,*,*,*,*,*,"LEAST(zoom + 1.76, 15)",*
+*,*,*,*,*,*,*,*,*,marina,*,*,*,*,*,*,*,*,*,*,*,*,*,"LEAST(zoom + 3.45, 17)",*
+*,*,*,place_of_worship,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,"LEAST(2 * zoom - 9.55, 17)",*
+*,*,*,townhall,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,"LEAST(zoom + 1.85, 16)",*
+*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,laundry;dry_cleaning;toys;ice_cream;wine;alcohol,*,*,*,*,*,*,"LEAST(zoom + 4.90, 17)",*
+*,*,*,ice_cream,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,"LEAST(zoom + 4.90, 17)",*
+*,*,*,ferry_terminal,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,"LEAST(zoom + 3.20, 15)",*
+*,*,*,school,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,"LEAST(zoom + 2.30, 15)",*
+*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,electronics,*,*,*,*,*,*,"LEAST(zoom + 3.30, 17)",*
+*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,department_store;supermarket;doityourself;hardware;trade,*,*,*,*,*,*,"LEAST(zoom + 3.29, 17)",*
+*,*,*,*,*,*,*,*,*,*,*,*,beach,*,*,*,*,*,*,*,*,*,*,"LEAST(zoom + 3.20, 14)",*
+*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,ski,*,*,*,"LEAST(zoom + 1.27, 17)",*
+*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,ski,*,*,*,*,*,*,"LEAST(zoom + 1.27, 17)",*
+*,*,*,ski_rental,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,"LEAST(zoom + 1.27, 17)",*
+*,*,*,ski_school,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,"LEAST(zoom + 2.30, 15)",*
+*,*,*,*,*,*,*,*,*,*,*,snow_cannon,*,*,*,*,*,*,*,*,*,*,*,"LEAST(zoom + 4.90, 18)",*
+*,*,*,*,*,*,*,*,*,sports_centre;fitness_centre;fitness_station,*,*,*,*,*,*,*,*,*,*,*,*,*,"LEAST(zoom + 3.98, 17)",*
+*,*,*,gym,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,"LEAST(zoom + 3.98, 17)",*
+*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,hotel;motel,*,"LEAST(zoom + 4.30, 17)",*
+*,*,*,*,*,*,*,motorway_junction,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,12,*
+*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,enclosure;petting_zoo;aviary;wildlife_park,*,*,17,*
+*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,animal;water_slide;roller_coaster;summer_toboggan;carousel;amusement_ride;maze,*,*,*,*,*,17,*
+*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,attraction;artwork;hanami;trail_riding_station,*,17,*
+*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,theme_park,*,"GREATEST(13, LEAST(zoom + 6.32, 17))",*
+*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,wilderness_hut,*,15,*
+*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,resort,*,"GREATEST(14, LEAST(zoom + 5.32, 17))",*
+*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,aquarium,*,"GREATEST(14, LEAST(zoom + 3.09, 17))",*
+*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,winery,*,"GREATEST(14, LEAST(zoom + 2.85, 17))",*
+*,*,*,social_facility;clinic;doctors;dentist,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,17,*
+*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,midwife,*,*,*,*,17,*
+*,*,*,kindergarten;childcare,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,17,*
+*,*,*,*,*,*,phone,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,18,*
+*,*,*,toilets,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,18,*
+*,*,*,*,gate,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,15,*
+*,*,*,*,*,sawmill,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,15,*
+*,*,*,*,*,*,*,gate;mini_roundabout,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,15,*
+*,*,*,*,*,*,*,*,*,*,yes,*,*,*,*,*,*,*,*,*,*,*,*,15,*
+*,*,*,*,*,*,*,*,*,*,*,lighthouse;power_wind,*,*,*,*,*,*,*,*,*,*,*,15,*
+*,*,*,*,*,*,*,*,*,*,*,*,cave_entrance,*,*,*,*,*,*,*,*,*,*,15,*
+*,*,*,*,*,*,*,*,*,*,*,*,*,*,generator,*,*,*,*,*,*,*,*,15,*
+*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,lock,15,*
+*,station,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,15,*
+*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,halt;tram_stop,*,*,*,*,*,*,*,15,*
+*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,alpine_hut,*,15,*
+*,*,helipad;gate,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,16,*
+*,*,*,bus_station;car_sharing;picnic_site;recycling;shelter,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,16,*
+*,*,*,*,block;bollard;lift_gate,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,16,*
+*,*,*,*,*,brewery;winery;sawmill,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,16,*
+*,*,*,*,*,*,*,ford,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,16,*
+*,*,*,*,*,*,*,*,archaeological_site,*,*,*,*,*,*,*,*,*,*,*,*,*,*,16,*
+*,*,*,*,*,*,*,*,*,*,*,windmill,*,*,*,*,*,*,*,*,*,*,*,16,*
+*,*,*,*,*,*,*,*,*,*,*,*,tree,*,*,*,*,*,*,*,*,*,*,16,*
+*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,camp_site;caravan_site;information;viewpoint,*,16,*
+*,*,*,atm;bicycle_rental;bicycle_parking;bus_stop;drinking_water;emergency_phone;parking;post_box;telephone;theatre;toilets,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,17,*
+*,*,*,*,*,*,*,bus_stop;traffic_signals,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,17,*
+*,*,*,*,*,*,*,*,memorial,*,*,*,*,*,*,*,*,*,*,*,*,*,*,17,*
+*,*,*,*,*,*,*,*,*,playground;slipway,*,*,*,*,*,*,*,*,*,*,*,*,*,17,*
+*,*,*,*,*,*,*,*,*,*,*,mast;water_tower,*,*,*,*,*,*,*,*,*,*,*,17,*
+*,*,*,*,*,*,*,*,*,*,*,*,*,accountant;administrative;advertising_agency;architect;association;company;consulting;educational_institution;employment_agency;estate_agent;financial;foundation;government;insurance;it;lawyer;newspaper;ngo;notary;physician;political_party;religion;research;tax_advisor;telecommunication;therapist;travel_agent;yes,*,*,*,*,*,*,*,*,*,17,*
+*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,bakery;bicycle;books;butcher;car;car_repair;clothes;computer;convenience;dry_cleaning;fashion;florist;gift;greengrocer;hairdresser;jewelry;mobile_phone;optician;pet,*,*,*,*,*,*,17,*
+*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,bed_and_breakfast;chalet;guest_house;hostel,*,17,*
+*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,subway_entrance,*,*,*,*,*,*,*,17,*
+*,*,*,bench;waste_basket,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,18,*
