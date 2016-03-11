@@ -6,7 +6,7 @@ import csv
 
 Rule = namedtuple(
     'Rule',
-    'calc equals not_exists set_memberships default_rule'
+    'calc equals not_equals not_exists set_memberships default_rule'
 )
 
 
@@ -33,6 +33,7 @@ def format_value(value):
 
 def create_rule(keys, row, calc):
     equals = []
+    not_equals = []
     not_exists = []
     set_memberships = []
     default_rule = None
@@ -43,6 +44,8 @@ def create_rule(keys, row, calc):
             continue
         if matcher == '-':
             not_exists.append(key)
+        elif matcher.startswith('-'):
+            not_equals.append((key, matcher[1:]))
         elif ';' in matcher:
             candidates = matcher.split(';')
             set_memberships.append((key, candidates))
@@ -51,7 +54,7 @@ def create_rule(keys, row, calc):
     if not equals and not not_exists and not set_memberships:
         default_rule = calc
     return Rule(
-        calc, equals, not_exists, set_memberships, default_rule)
+        calc, equals, not_equals, not_exists, set_memberships, default_rule)
 
 
 def create_case_statement(rules):
@@ -59,6 +62,7 @@ def create_case_statement(rules):
     default_rule = None
     for rule in rules:
         when_equals = ''
+        when_not_equals = ''
         when_not_exists = ''
         when_in = ''
 
@@ -72,6 +76,13 @@ def create_case_statement(rules):
                                  for key, matcher in rule.equals]
             when_equals = ' AND '.join(when_equals_parts)
             when_conds.append(when_equals)
+
+        if rule.not_equals:
+            when_not_equals_parts = ['%s <> %s' % (format_key(key),
+                                                   format_value(matcher))
+                                     for key, matcher in rule.equals]
+            when_not_equals = ' AND '.join(when_not_equals_parts)
+            when_conds.append(when_not_equals)
 
         if rule.not_exists:
             when_not_exists_parts = ['%s IS NULL' % format_key(key)
