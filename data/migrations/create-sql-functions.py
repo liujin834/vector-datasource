@@ -174,7 +174,8 @@ with open('../../spreadsheets/kind/landuse.csv') as fh:
                 kind_rule = create_rule(keys, row, kind_calc)
                 kind_rules.append(kind_rule)
 
-landuse_params = (used_params(kind_rules) | used_params(min_zoom_rules)) - set(['tags'])
+landuse_params = ((used_params(kind_rules) | used_params(min_zoom_rules))
+                  - set(['tags']))
 landuse_kind_case = create_case_statement(kind_rules)
 landuse_min_zoom_case = create_case_statement(min_zoom_rules)
 template_name = 'sql.jinja2'
