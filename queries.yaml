@@ -152,17 +152,6 @@ post_process:
       matcher:
         type: file
         init_fn: TileStache.Goodies.VecTiles.transform.CSVMatcher
-        path: spreadsheets/kind/landuse.csv
-        params:
-          ignore_columns: [min_zoom]
-    params:
-      source_layer: landuse
-      target_value_type: int
-  - fn: TileStache.Goodies.VecTiles.transform.csv_match_properties
-    resources:
-      matcher:
-        type: file
-        init_fn: TileStache.Goodies.VecTiles.transform.CSVMatcher
         path: spreadsheets/landuse.csv
     params:
       source_layer: landuse
